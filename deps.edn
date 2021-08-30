@@ -1,0 +1,9 @@
+{:deps {org.clojure/clojurescript                   {:mvn/version "1.10.764"}
+        org.clojure/core.async {:mvn/version "1.3.618"}
+        cljs-node-io/cljs-node-io                   {:mvn/version "1.0.0"}}
+ :paths ["src"]
+ :aliases {:cljs-repl
+           {:main-opts   ["-m" "nrepl.cmdline" "--middleware" "[cider.piggieback/wrap-cljs-repl]"  "--interactive]"]
+            :extra-deps  {;; The below dependencies may not be necessary depending on how you start your repl
+                          nrepl/nrepl {:mvn/version "0.8.2"}
+                          cider/piggieback {:mvn/version "0.5.2"}}}}}
